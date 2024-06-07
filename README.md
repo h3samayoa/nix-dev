@@ -19,7 +19,7 @@ Nix Dev Environments
       &emsp;<pre><code>echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf</code></pre> <br>
       &emsp;<pre><code>echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf</code></pre>
 
-  * bash version 4.4
+  * bash version 4.4+
 
 ## Usage
 
@@ -33,8 +33,9 @@ If you want to omit the allow unfree tag export it as an Environment Variable **
 
 ## nix-direnv
 
+To change shells automatically we need to use [direnv](https://github.com/nix-community/nix-direnv) 
 
-To change shells automatically we need to use [direnv]()
+Its already preinstalled in the ```.envrc``` file just run ```direnv allow``` 
 
 ## Troubleshooting
 
@@ -42,6 +43,6 @@ List of tools used and links to their docs:
 
 used [nix-systems](https://github.com/nix-systems/nix-systems) to resolve system deps 
 
-You can also use with [flake-parts](https://devenv.sh/guides/using-with-flake-parts/) ```flake.nix``` this would require more extensive configuring with [devenv](https://devenv.sh/getting-started/)
+You can also use with [flake-parts](https://devenv.sh/guides/using-with-flake-parts/) in our ```flake.nix``` this would require more extensive configuring with [devenv](https://devenv.sh/getting-started/)
 
-**Make sure everything is commited to git or nix can't find the file**
+**Make sure everything is added to git or nix can't find the file**
